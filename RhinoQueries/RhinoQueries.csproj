@@ -53,6 +53,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Commands\rqQueryBuilderPanel.cs" />
     <Compile Include="Commands\rqUserStringManager.cs" />
     <Compile Include="Core\Extensions\UserDataExtensions.cs" />
     <Compile Include="Core\Models\RhinoModelBase.cs" />
@@ -63,6 +64,13 @@
     <Compile Include="rqTestCommand.cs" />
     <Compile Include="RhinoQueriesPlugIn.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UI\Custom\QueryBox.cs" />
+    <Compile Include="UI\Custom\UNUSEDQueryBox.cs" />
+    <Compile Include="UI\Custom\QueryRow.cs" />
+    <Compile Include="UI\Models\QueryGroup.cs" />
+    <Compile Include="UI\Models\QueryModel.cs" />
+    <Compile Include="UI\Models\QueryTree.cs" />
+    <Compile Include="UI\Views\QueryBuilderPanel.cs" />
     <Compile Include="UI\Views\UserStringManagerPanel.cs" />
   </ItemGroup>
   <ItemGroup>
