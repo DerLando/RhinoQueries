@@ -17,7 +17,7 @@ namespace RhinoQueries.UI.Views
     {
         // fields
         private readonly uint _document_sn;
-        private DocumentUserStringsKeyTable _key_table;
+        public DocumentUserStringsKeyTable _key_table;
 
         // controls
         private ListBox _lb_keys = new ListBox();

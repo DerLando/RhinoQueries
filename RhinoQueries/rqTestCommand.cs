@@ -1,12 +1,16 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using Rhino;
 using Rhino.Commands;
 using Rhino.Geometry;
 using Rhino.Input;
 using Rhino.Input.Custom;
+using Rhino.UI;
 using RhinoQueries.Core.Extensions;
+using RhinoQueries.Core.Parsing;
 using RhinoQueries.Core.Tables;
+using RhinoQueries.UI.Views;
 
 namespace RhinoQueries
 {
@@ -38,6 +42,17 @@ namespace RhinoQueries
             var table = new ObjectModelTable(doc);
 
             var keys = doc.ExtractUserKeys();
+
+            var panel = Panels.GetPanel<QueryBuilderPanel>(doc);
+
+            var queried =
+                from obj in table
+                where QueryParser.IsValid(obj, panel._qTree[0])
+                select obj;
+
+            doc.Objects.Select(from q in queried select q.Id);
+
+            doc.Views.Redraw();
 
             return Result.Success;
         }

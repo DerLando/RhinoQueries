@@ -18,7 +18,7 @@ namespace RhinoQueries.UI.Views
     {
         // fields
         private readonly uint _document_sn;
-        private QueryTree _qTree = new QueryTree();
+        public QueryTree _qTree = new QueryTree();
 
         // Auto-initialized properties
         public static Guid PanelId => typeof(QueryBuilderPanel).GUID;
