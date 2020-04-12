@@ -53,9 +53,17 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Commands\rqUserStringManager.cs" />
+    <Compile Include="Core\Extensions\UserDataExtensions.cs" />
+    <Compile Include="Core\Models\RhinoModelBase.cs" />
+    <Compile Include="Core\Models\RhinoObjectModel.cs" />
+    <Compile Include="Core\Tables\DocumentUserStringsKeyTable.cs" />
+    <Compile Include="Core\Tables\ObjectModelTable.cs" />
+    <Compile Include="Core\Tables\TableBase.cs" />
     <Compile Include="rqTestCommand.cs" />
     <Compile Include="RhinoQueriesPlugIn.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UI\Views\UserStringManagerPanel.cs" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="EmbeddedResources\plugin-utility.ico" />

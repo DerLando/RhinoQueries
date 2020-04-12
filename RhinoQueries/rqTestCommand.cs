@@ -5,6 +5,8 @@ using Rhino.Commands;
 using Rhino.Geometry;
 using Rhino.Input;
 using Rhino.Input.Custom;
+using RhinoQueries.Core.Extensions;
+using RhinoQueries.Core.Tables;
 
 namespace RhinoQueries
 {
@@ -32,6 +34,10 @@ namespace RhinoQueries
         protected override Result RunCommand(RhinoDoc doc, RunMode mode)
         {
             RhinoApp.WriteLine("The {0} command is under construction.", EnglishName);
+
+            var table = new ObjectModelTable(doc);
+
+            var keys = doc.ExtractUserKeys();
 
             return Result.Success;
         }
